@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Casa Bellini — Traditional Neapolitan pizza, fine Italian ingredients and unforgettable evenings.">
+<title>Casa Bellini | An Italian Tradition</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Italiana&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f4eddf;
+  --paper: #eae0ce;
+  --burgundy: #641f2c;
+  --dark-burgundy: #40151e;
+  --green: #283c2d;
+  --gold: #ae8b50;
+  --ink: #30251e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(1150px, 88%);
+  margin: auto;
+}
+
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+
+.section-heading {
+  font-family: 'Italiana', serif;
+  font-size: clamp(45px, 6vw, 75px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gold-line {
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px 0;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement {
+  background: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--cream);
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  max-width: 1300px;
+  margin: auto;
+  min-height: 105px;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(100,31,44,.17);
+}
+
+.brand {
+  text-align: center;
+  color: var(--burgundy);
+}
+
+.brand-name {
+  font-family: 'Italiana', serif;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.brand-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  transition: color .2s;
+}
+
+.nav-links a:hover {
+  color: var(--burgundy);
+}
+
+.nav-book {
+  background: var(--burgundy);
+  color: var(--cream) !important;
+  padding: 14px 20px;
+}
+
+.nav-book:hover {
+  background: var(--green);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(29,20,15,.83) 0%, rgba(29,20,15,.55) 52%, rgba(29,20,15,.12) 100%),
+    url('https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=2200&q=85')
+    center/cover;
+  color: var(--cream);
+}
+
+.hero-content {
+  width: min(1150px, 88%);
+  margin: auto;
+  padding: 120px 0;
+}
+
+.hero-kicker {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #dfc18a;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-family: 'Italiana', serif;
+  font-weight: 400;
+  font-size: clamp(65px, 10vw, 125px);
+  line-height: .88;
+  max-width: 780px;
+}
+
+.hero h1 em {
+  color: #e1c38d;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 420px;
+  color: #eee4d6;
+  margin-top: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.button-gold {
+  background: var(--gold);
+  color: white;
+}
+
+.button-gold:hover {
+  background: var(--cream);
+  color: var(--burgundy);
+}
+
+.button-outline {
+  border: 1px solid rgba(255,255,255,.65);
+  color: white;
+}
+
+.button-outline:hover {
+  background: white;
+  color: var(--burgundy);
+}
+
+/* INTRO */
+
+.intro {
+  padding: 115px 0;
+  text-align: center;
+  background: var(--cream);
+}
+
+.intro .section-heading {
+  max-width: 750px;
+  margin: auto;
+}
+
+.intro-copy {
+  max-width: 600px;
+  margin: 25px auto 0;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #71665b;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+/* STORY */
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: var(--cream);
+}
+
+.story-image {
+  min-height: 620px;
+  background:
+    url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=85')
+    center/cover;
+}
+
+.story-content {
+  padding: 90px clamp(35px, 7vw, 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-content .section-heading {
+  max-width: 500px;
+}
+
+.story-content p {
+  font-size: 19px;
+  line-height: 1.85;
+  color: #ded9ca;
+  margin-bottom: 20px;
+}
+
+.story-signature {
+  font-family: 'Italiana', serif;
+  font-size: 29px;
+  color: #d6b77c;
+  margin-top: 15px;
+}
+
+/* PHILOSOPHY STRIP */
+
+.philosophy {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 65px 0;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.philosophy-item {
+  padding: 10px 20px;
+}
+
+.philosophy-item:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+
+.philosophy-number {
+  font-family: 'Italiana', serif;
+  font-size: 36px;
+  color: #d7b77c;
+}
+
+.philosophy-item h3 {
+  font-family: 'Italiana', serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.philosophy-item p {
+  color: #e0cfc1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* MENU */
+
+.menu {
+  padding: 120px 0;
+  background: var(--paper);
+}
+
+.menu-heading {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.menu-heading p {
+  font-size: 18px;
+  color: #76695d;
+  margin-top: 18px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 65px;
+}
+
+.menu-item {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(100,31,44,.2);
+}
+
+.menu-image {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.menu-info {
+  flex: 1;
+}
+
+.menu-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  border-bottom: 1px dotted #b8a991;
+  padding-bottom: 7px;
+}
+
+.menu-item h3 {
+  font-family: 'Italiana', serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.menu-price {
+  color: var(--burgundy);
+  font-size: 19px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.menu-info p {
+  font-size: 15px;
+  color: #76695d;
+  line-height: 1.5;
+  margin-top: 9px;
+}
+
+.menu-note {
+  text-align: center;
+  color: #76695d;
+  margin-top: 45px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* FOOD GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  height: 340px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.gallery figure {
+  overflow: hidden;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.05);
+}
+
+/* RESERVATIONS */
+
+.reservation {
+  background: var(--cream);
+  padding: 115px 0;
+  text-align: center;
+}
+
+.reservation .section-heading {
+  max-width: 650px;
+  margin: auto;
+}
+
+.reservation-copy {
+  max-width: 500px;
+  margin: 25px auto 35px;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #71665b;
+}
+
+.reservation-details {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 55px auto 40px;
+  flex-wrap: wrap;
+}
+
+.reservation-details h3 {
+  font-family: 'Italiana', serif;
+  font-size: 23px;
+  color: var(--burgundy);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.reservation-details p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #71665b;
+}
+
+.reservation-button {
+  background: var(--burgundy);
+  color: white;
+  display: inline-block;
+  padding: 17px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.reservation-button:hover {
+  background: var(--green);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark-burgundy);
+  color: var(--cream);
+  padding: 65px 0 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 55px;
+  padding-bottom: 55px;
+}
+
+.footer-brand {
+  font-family: 'Italiana', serif;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.footer-brand span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 8px;
+  color: #d4b77f;
+}
+
+.footer-column h3 {
+  font-family: 'Italiana', serif;
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #d4b77f;
+}
+
+.footer-column p,
+.footer-column a {
+  display: block;
+  color: #d9c8bd;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.18);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #c5ada0;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 4%;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: 650px;
+    background-position: 60% center;
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    min-height: 400px;
+  }
+
+  .story-content {
+    padding: 75px 7%;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .philosophy-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 30px;
+  }
+
+  .gallery {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery figure {
+    height: 220px;
+  }
+
+  .gallery figure:last-child {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .footer-grid > :first-child {
+    grid-column: 1/-1;
+  }
+
+  .reservation-details {
+    gap: 35px;
+  }
+}
+
+@media(max-width: 450px) {
+  .menu-item {
+    gap: 14px;
+  }
+
+  .menu-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .menu-item h3 {
+    font-size: 21px;
+  }
+
+  .menu-info p {
+    font-size: 13px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > :first-child {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  An Italian tradition · Established 1987 · Made with amore
+</div>
+
+<!-- NAVIGATION -->
+<header>
+  <nav>
+    <a href="#home" class="brand">
+      <div class="brand-name">CASA BELLINI</div>
+      <div class="brand-sub">Pizzeria · Italia</div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#story">Our story</a>
+      <a href="#menu">The menu</a>
+      <a href="#visit">Find us</a>
+      <a href="#visit" class="nav-book">Reservations</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      La vera pizza napoletana
+    </div>
+
+    <h1>
+      A taste of<br>
+      <em>la dolce vita.</em>
+    </h1>
+
+    <p class="hero-description">
+      Authentic Neapolitan pizza, beautiful Italian
+      ingredients and evenings worth remembering.
+      Welcome to Casa Bellini.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#menu" class="button button-gold">
+        Discover our menu
+      </a>
+
+      <a href="#visit" class="button button-outline">
+        Visit Casa Bellini
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+
+    <div class="section-label">Benvenuti a Casa Bellini</div>
+
+    <h2 class="section-heading">
+      Where every meal tells<br>
+      a little Italian story.
+    </h2>
+
+    <div class="gold-line" style="margin:30px auto;"></div>
+
+    <p class="intro-copy">
+      Some things are worth taking your time over.
+      The perfect dough, the finest ingredients,
+      a glass of good wine and the company of those
+      you love. At Casa Bellini, we celebrate them all.
+    </p>
+
+    <div class="ornament">✦</div>
+
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+
+  <div class="story-image"></div>
+
+  <div class="story-content">
+
+    <div class="section-label">La nostra storia</div>
+
+    <h2 class="section-heading">
+      A little piece<br>
+      of Naples.
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+      Our story began in the heart of Naples,
+      where our founder, Antonio Bellini,
+      grew up surrounded by the aromas of fresh
+      tomatoes, wood-fired ovens and his grandmother's kitchen.
+    </p>
+
+    <p>
+      In 1987, he brought that tradition to Casa Bellini.
+      Today, we continue to honour the simple Italian
+      belief that great food begins with great ingredients
+      and a little love.
+    </p>
+
+    <div class="story-signature">
+      Con amore, The Bellini Family
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="container philosophy-grid">
+
+    <div class="philosophy-item">
+      <div class="philosophy-number">01</div>
+      <h3>Fresh ingredients</h3>
+      <p>Carefully selected Italian ingredients, chosen for their quality and flavour.</p>
+    </div>
+
+    <div class="philosophy-item">
+      <div class="philosophy-number">02</div>
+      <h3>Traditional methods</h3>
+      <p>Slow-fermented dough and wood-fired ovens, just as tradition intended.</p>
+    </div>
+
+    <div class="philosophy-item">
+      <div class="philosophy-number">03</div>
+      <h3>Made with amore</h3>
+      <p>Every dish prepared with patience, passion and a genuine love of food.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="container">
+
+    <div class="menu-heading">
+      <div class="section-label">Il nostro menu</div>
+
+      <h2 class="section-heading">
+        A few Italian favourites.
+      </h2>
+
+      <p>Simple ingredients. Extraordinary flavour.</p>
+
+      <div class="gold-line" style="margin:25px auto;"></div>
+    </div>
+
+    <div class="menu-grid">
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=85"
+          alt="Margherita pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Margherita</h3>
+            <span class="menu-price">£14</span>
+          </div>
+          <p>San Marzano tomato, fior di latte mozzarella, fresh basil and extra virgin olive oil.</p>
+        </div>
+      </article>
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=85"
+          alt="Pepperoni pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Diavola</h3>
+            <span class="menu-price">£17</span>
+          </div>
+          <p>Spicy salami, mozzarella, tomato, chilli oil and fresh oregano.</p>
+        </div>
+      </article>
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&q=85"
+          alt="Mushroom pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Funghi</h3>
+            <span class="menu-price">£16</span>
+          </div>
+          <p>Wild mushrooms, mozzarella, garlic, thyme and truffle oil.</p>
+        </div>
+      </article>
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=85"
+          alt="Prosciutto pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Prosciutto</h3>
+            <span class="menu-price">£19</span>
+          </div>
+          <p>Parma ham, rocket, parmesan shavings and San Marzano tomato.</p>
+        </div>
+      </article>
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=400&q=85"
+          alt="Four cheese pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Quattro Formaggi</h3>
+            <span class="menu-price">£18</span>
+          </div>
+          <p>Four Italian cheeses, creamy mozzarella, gorgonzola and parmesan.</p>
+        </div>
+      </article>
+
+      <article class="menu-item">
+        <img class="menu-image"
+          src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&q=85"
+          alt="Vegetarian pizza">
+        <div class="menu-info">
+          <div class="menu-item-top">
+            <h3>Ortolana</h3>
+            <span class="menu-price">£16</span>
+          </div>
+          <p>Roasted courgette, peppers, aubergine, mozzarella and basil.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="menu-note">
+      All our pizzas are made fresh to order. Buon appetito!
+    </p>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=900&q=85"
+      alt="Freshly baked Italian pizza">
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=900&q=85"
+      alt="Traditional Neapolitan pizza">
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&q=85"
+      alt="Pizza served fresh from the oven">
+  </figure>
+</section>
+
+<!-- VISIT / RESERVATIONS -->
+<section class="reservation" id="visit">
+  <div class="container">
+
+    <div class="section-label">Vi aspettiamo</div>
+
+    <h2 class="section-heading">
+      Your table is<br>
+      waiting.
+    </h2>
+
+    <p class="reservation-copy">
+      Whether it's a romantic evening, a family
+      celebration or simply a craving for good pizza,
+      there's always a place for you at Casa Bellini.
+    </p>
+
+    <div class="gold-line" style="margin:25px auto;"></div>
+
+    <div class="reservation-details">
+
+      <div>
+        <h3>Find us</h3>
+        <p>24 Piazza Bellini<br>Florence, Italy</p>
+      </div>
+
+      <div>
+        <h3>Opening hours</h3>
+        <p>Tuesday – Sunday<br>12:00 – 22:00<br>Closed Mondays</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>+39 055 123 4567<br>ciao@casabellini.example</p>
+      </div>
+
+    </div>
+
+    <a href="mailto:ciao@casabellini.example?subject=Table%20Reservation"
+      class="reservation-button">
+      Enquire about a reservation
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">
+          CASA BELLINI
+          <span>PIZZERIA · ITALIA</span>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Visit us</h3>
+        <p>24 Piazza Bellini</p>
+        <p>Florence, Italy</p>
+        <p>Tuesday – Sunday</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#story">Our story</a>
+        <a href="#menu">The menu</a>
+        <a href="#visit">Reservations</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Casa Bellini. All rights reserved.</span>
+      <span>Fatto con amore in Italia.</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
