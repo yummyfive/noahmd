@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noah MD creates modern, professional websites for small businesses.">
+  <title>Noah MD — Websites That Work.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #10110e;
+      --white: #f7f7f2;
+      --lime: #c7e64c;
+      --grey: #77796f;
+      --line: rgba(255,255,255,0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 88%);
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: min(850px, 100svh);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    nav {
+      width: min(1160px, 88%);
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo, .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+    }
+
+    .logo span, .footer-logo span {
+      color: var(--lime);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: #c3c4bc;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--lime);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--lime);
+      padding: 11px 19px;
+      border-radius: 3px;
+      color: var(--lime) !important;
+    }
+
+    .nav-contact:hover {
+      background: var(--lime);
+      color: var(--black) !important;
+    }
+
+    .hero-content {
+      flex: 1;
+      width: min(1160px, 88%);
+      margin: auto;
+      padding: 100px 0 110px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--lime);
+      margin-bottom: 30px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--lime);
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(65px, 10.5vw, 126px);
+      letter-spacing: -8px;
+      line-height: .94;
+      font-weight: 600;
+      max-width: 950px;
+    }
+
+    h1 span {
+      color: var(--lime);
+    }
+
+    .hero-description {
+      color: #aaa99f;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 430px;
+      margin-top: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 37px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 23px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .button-primary:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    .button-outline {
+      border-color: #55564e;
+      color: white;
+    }
+
+    .button-outline:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+      transform: translateY(-3px);
+    }
+
+    .hero-bottom {
+      width: min(1160px, 88%);
+      margin: 0 auto;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      color: #77796f;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      right: -100px;
+      top: 30%;
+      width: 430px;
+      height: 430px;
+      border: 1px solid rgba(199,230,76,.13);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-decoration::before,
+    .hero-decoration::after {
+      content: '';
+      position: absolute;
+      border: 1px solid rgba(199,230,76,.13);
+      border-radius: 50%;
+      inset: 45px;
+    }
+
+    .hero-decoration::after {
+      inset: 100px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--white);
+      color: var(--black);
+      padding: 120px 0;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #77796f;
+      margin-bottom: 30px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .about h2,
+    .work h2,
+    .pricing h2,
+    .contact h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(42px, 6vw, 70px);
+      letter-spacing: -4px;
+      line-height: 1.05;
+      font-weight: 600;
+    }
+
+    .about h2 span {
+      color: #91ad25;
+    }
+
+    .about-copy {
+      padding-top: 8px;
+      font-size: 15px;
+      color: #55564e;
+      line-height: 1.9;
+    }
+
+    .about-copy p + p {
+      margin-top: 20px;
+    }
+
+    .about-stat {
+      margin-top: 38px;
+      padding-top: 25px;
+      border-top: 1px solid #d8d9d1;
+    }
+
+    .about-stat strong {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 30px;
+      letter-spacing: -1px;
+    }
+
+    .about-stat span {
+      display: block;
+      color: #77796f;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* PORTFOLIO */
+
+    .work {
+      padding: 120px 0;
+      background: #181a15;
+    }
+
+    .work-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 55px;
+    }
+
+    .work .section-label {
+      color: var(--lime);
+    }
+
+    .work h2 {
+      max-width: 600px;
+    }
+
+    .work-intro {
+      color: #92938a;
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 280px;
+    }
+
+    .project-card {
+      background: #22251e;
+      border: 1px solid #35382d;
+      overflow: hidden;
+    }
+
+    /* WEBSITE SCREENSHOT */
+
+    .project-preview {
+      height: clamp(260px, 48vw, 560px);
+      background: #e9e9df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .project-preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .project-details {
+      padding: 27px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .project-details h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .project-details p {
+      color: #92938a;
+      font-size: 12px;
+    }
+
+    .project-link {
+      background: var(--lime);
+      color: var(--black);
+      padding: 14px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: .2s;
+    }
+
+    .project-link:hover {
+      background: white;
+    }
+
+    /* PRICING */
+
+    .pricing {
+      background: var(--white);
+      color: var(--black);
+      padding: 120px 0;
+    }
+
+    .pricing .section-label {
+      color: #77796f;
+    }
+
+    .pricing-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 55px;
+    }
+
+    .pricing-heading h2 {
+      max-width: 600px;
+    }
+
+    .pricing-intro {
+      color: #65665d;
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 290px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .price-card {
+      border: 1px solid #d9dbd0;
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: #fff;
+    }
+
+    .price-card.featured {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .popular-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--lime);
+      color: var(--black);
+      padding: 10px 16px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .price-type {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: #77796f;
+    }
+
+    .featured .price-type {
+      color: var(--lime);
+    }
+
+    .price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(52px, 6vw, 76px);
+      font-weight: 600;
+      letter-spacing: -5px;
+      line-height: 1;
+    }
+
+    .price-description {
+      color: #77796f;
+      font-size: 13px;
+      margin-top: 12px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .featured .price-description {
+      color: #aaa99f;
+    }
+
+    .price-divider {
+      height: 1px;
+      background: #dedfd7;
+      margin-bottom: 25px;
+    }
+
+    .featured .price-divider {
+      background: #35382d;
+    }
+
+    .features-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .price-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .price-features li {
+      font-size: 13px;
+      color: #55564e;
+      display: flex;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .featured .price-features li {
+      color: #d0d0c7;
+    }
+
+    .price-features li::before {
+      content: '✓';
+      color: #91ad25;
+      font-weight: 800;
+    }
+
+    .price-button {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      background: var(--black);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .price-button:hover {
+      background: #34372b;
+    }
+
+    .featured .price-button {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .featured .price-button:hover {
+      background: white;
+    }
+
+    .pricing-note {
+      margin-top: 25px;
+      color: #77796f;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--lime);
+      color: var(--black);
+      padding: 120px 0;
+    }
+
+    .contact .section-label {
+      color: #46551b;
+    }
+
+    .contact-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+    }
+
+    .contact h2 {
+      max-width: 650px;
+    }
+
+    .contact-copy {
+      margin-top: 25px;
+      font-size: 15px;
+      color: #48551e;
+      line-height: 1.8;
+      max-width: 400px;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 19px 24px;
+      background: var(--black);
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      transition: .2s;
+      white-space: nowrap;
+    }
+
+    .email-link:hover {
+      background: white;
+      color: var(--black);
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+    }
+
+    footer p {
+      color: #77796f;
+      font-size: 11px;
+    }
+
+    .back-top {
+      color: var(--lime);
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 22px 0;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+
+      .nav-contact {
+        padding: 9px !important;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .hero-content {
+        padding: 100px 0;
+      }
+
+      h1 {
+        font-size: clamp(58px, 13vw, 85px);
+        letter-spacing: -5px;
+      }
+
+      .hero-decoration {
+        right: -250px;
+        top: 35%;
+      }
+
+      .about,
+      .work,
+      .pricing,
+      .contact {
+        padding: 85px 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .work-heading,
+      .pricing-heading {
+        display: block;
+      }
+
+      .work-intro,
+      .pricing-intro {
+        margin-top: 20px;
+      }
+
+      .project-preview {
+        height: 300px;
+        padding: 12px;
+      }
+
+      .project-details {
+        padding: 22px 17px;
+        align-items: start;
+      }
+
+      .project-link {
+        padding: 12px;
+        font-size: 10px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card {
+        padding: 30px 24px;
+      }
+
+      .contact-grid {
+        display: block;
+      }
+
+      .email-link {
+        margin-top: 30px;
+      }
+
+      .footer-inner {
+        flex-wrap: wrap;
+      }
+
+      .hero-bottom {
+        gap: 15px;
+        font-size: 9px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .nav-links {
+        gap: 8px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+      }
+
+      .nav-contact {
+        padding: 7px !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+
+    <nav>
+      <a href="#home" class="logo">NOAH<span>MD.</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Our work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-contact">Get in touch ↗</a>
+      </div>
+    </nav>
+
+    <div class="hero-decoration"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">Independent web design studio</div>
+
+      <h1>
+        Websites<br>
+        that <span>work.</span>
+      </h1>
+
+      <p class="hero-description">
+        Professional, modern websites for businesses
+        that want to make a great first impression.
+        Thoughtfully designed. Built to make an impact.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#work" class="button button-primary">
+          Explore our work ↗
+        </a>
+
+        <a href="#about" class="button button-outline">
+          More about us
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>Design. Development. Digital.</span>
+      <span>Based in the UK · Working everywhere</span>
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-label">01 — A little about us</div>
+
+      <div class="about-grid">
+
+        <h2>
+          Good design.<br>
+          Great websites.<br>
+          <span>No unnecessary fuss.</span>
+        </h2>
+
+        <div class="about-copy">
+          <p>
+            Noah MD is an independent web design studio
+            focused on helping small businesses build
+            a stronger online presence.
+          </p>
+
+          <p>
+            We believe every business deserves a website
+            that looks professional, feels effortless to use
+            and gives customers a reason to get in touch.
+          </p>
+
+          <p>
+            From the first idea to the finished website,
+            the focus is always on thoughtful design,
+            attention to detail and getting the basics right.
+          </p>
+
+          <div class="about-stat">
+            <strong>01 — 01</strong>
+            <span>Personal approach. Every project.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PORTFOLIO -->
+  <section class="work" id="work">
+    <div class="container">
+
+      <div class="section-label">02 — Selected work</div>
+
+      <div class="work-heading">
+        <h2>
+          A look at<br>
+          what we do.
+        </h2>
+
+        <p class="work-intro">
+          Good websites don't just look good.
+          They make it easier for customers
+          to understand, trust and choose your business.
+        </p>
+      </div>
+
+      <div class="project-card">
+
+        <!--
+          ADD YOUR WEBSITE SCREENSHOT HERE.
+          Save your image as example-website.jpg
+          in the same folder as this HTML file.
+        -->
+
+        <div class="project-preview">
+          <img
+            src="example-website.jpg"
+            alt="Screenshot of an example website designed by Noah MD"
+          >
+        </div>
+
+        <div class="project-details">
+          <div>
+            <h3>Example website</h3>
+            <p>Website design · Portfolio project</p>
+          </div>
+
+          <!-- Replace with your example website URL -->
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View project ↗
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+
+      <div class="section-label">03 — Straightforward pricing</div>
+
+      <div class="pricing-heading">
+        <h2>
+          Simple websites.<br>
+          Straightforward prices.
+        </h2>
+
+        <p class="pricing-intro">
+          No complicated packages or confusing quotes.
+          Choose the website that suits your business
+          and let's get started.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- ONE PAGE -->
+        <div class="price-card">
+
+          <div class="price-type">The essentials</div>
+
+          <div class="price">£75</div>
+
+          <p class="price-description">
+            A clean, professional one-page website
+            to get your business online.
+          </p>
+
+          <div class="price-divider"></div>
+
+          <div class="features-title">Package details</div>
+
+          <ul class="price-features">
+            <li>One-page website</li>
+            <li>Custom website design</li>
+            <li>Mobile-friendly layout</li>
+            <li>Contact information</li>
+            <li>Basic SEO setup</li>
+          </ul>
+
+          <a href="#contact" class="price-button">
+            Get started ↗
+          </a>
+
+        </div>
+
+
+        <!-- FULL WEBSITE -->
+        <div class="price-card featured">
+
+          <div class="popular-label">Best value</div>
+
+          <div class="price-type">The complete website</div>
+
+          <div class="price">£175</div>
+
+          <p class="price-description">
+            A more complete online presence with
+            up to five individually designed pages.
+          </p>
+
+          <div class="price-divider"></div>
+
+          <div class="features-title">Package details</div>
+
+          <ul class="price-features">
+            <li>Up to five website pages</li>
+            <li>Custom website design</li>
+            <li>Mobile-friendly layout</li>
+            <li>Contact information</li>
+            <li>Basic SEO setup</li>
+            <li>Consistent design throughout</li>
+          </ul>
+
+          <a href="#contact" class="price-button">
+            Get started ↗
+          </a>
+
+        </div>
+
+      </div>
+
+      <p class="pricing-note">
+        Prices are one-off website development fees.
+        Domain registration, hosting and any paid third-party
+        services are charged separately.
+        Get in touch to discuss your requirements.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-label">04 — Let's work together</div>
+
+      <div class="contact-grid">
+
+        <div>
+          <h2>
+            Have a project<br>
+            in mind?
+          </h2>
+
+          <p class="contact-copy">
+            Looking for a new website for your business?
+            We'd love to hear what you have in mind.
+            Let's make something great.
+          </p>
+        </div>
+
+        <!-- REPLACE WITH YOUR ACTUAL EMAIL ADDRESS -->
+        <a
+          href="mailto:YOUR_EMAIL@example.com"
+          class="email-link"
+        >
+          Get in touch ↗
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <a href="#home" class="footer-logo">
+        NOAH<span>MD.</span>
+      </a>
+
+      <p>
+        © <span id="year"></span> Noah MD. All rights reserved.
+      </p>
+
+      <a href="#home" class="back-top">
+        Back to top ↑
+      </a>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // Automatically update copyright year
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
